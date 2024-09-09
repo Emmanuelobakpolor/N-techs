@@ -68,3 +68,24 @@ function sendEmail() {
     var body = "Message content";
     window.location.href = "mailto:" + email + "?subject=" + subject + "&body=" + body;
   }
+
+
+    (function() {
+        emailjs.init('98IaQBv2SeigDdeJT'); // Replace with your EmailJS user ID
+    })();
+
+    function sendEmail() {
+        var templateParams = {
+            name: document.getElementById('user_name').value,
+            email: document.getElementById('user_email').value,
+            message: document.getElementById('user_message').value
+        };
+
+        emailjs.send('service_meekqyj', 'template_r5zk44e', templateParams)
+            .then(function(response) {
+                alert('Message sent successfully!', response.status, response.text);
+            }, function(error) {
+                alert('Failed to send the message. Please try again later.', error);
+            });
+    }
+</script>
