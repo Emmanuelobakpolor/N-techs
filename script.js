@@ -62,11 +62,9 @@ document.getElementById('prev-project').addEventListener('click', () => {
     projectCarousel.scrollLeft -= 300; // Adjust as necessary
 });
 
-
 function sendEmail() {
     var email = "your_email_address";
     var subject = "Message from Website";
     var body = "Message content";
     window.location.href = "mailto:" + email + "?subject=" + subject + "&body=" + body;
   }
-
