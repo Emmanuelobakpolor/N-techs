@@ -69,4 +69,4 @@ function sendEmail() {
     var body = "Message content";
     window.location.href = "mailto:" + email + "?subject=" + subject + "&body=" + body;
   }
-</script>
+
