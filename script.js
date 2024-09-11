@@ -63,22 +63,10 @@ document.getElementById('prev-project').addEventListener('click', () => {
 });
 
 
-    (function() {
-        emailjs.init('m3tLTkhQb9nzdFpD8'); // Replace with your EmailJS user ID
-    })();
-
-    function sendEmail() {
-        var templateParams = {
-            name: document.getElementById('user_name').value,
-            email: document.getElementById('user_email').value,
-            message: document.getElementById('user_message').value
-        };
-
-        emailjs.send('service_meekqyj', 'template_r5zk44e', templateParams)
-            .then(function(response) {
-                alert('Message sent successfully!', response.status, response.text);
-            }, function(error) {
-                alert('Failed to send the message. Please try again later.', error);
-            });
-    }
+function sendEmail() {
+    var email = "your_email_address";
+    var subject = "Message from Website";
+    var body = "Message content";
+    window.location.href = "mailto:" + email + "?subject=" + subject + "&body=" + body;
+  }
 </script>
