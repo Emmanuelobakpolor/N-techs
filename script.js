@@ -62,16 +62,9 @@ document.getElementById('prev-project').addEventListener('click', () => {
     projectCarousel.scrollLeft -= 300; // Adjust as necessary
 });
 
-function sendEmail() {
-    var email = "your_email_address";
-    var subject = "Message from Website";
-    var body = "Message content";
-    window.location.href = "mailto:" + email + "?subject=" + subject + "&body=" + body;
-  }
-
 
     (function() {
-        emailjs.init('98IaQBv2SeigDdeJT'); // Replace with your EmailJS user ID
+        emailjs.init('m3tLTkhQb9nzdFpD8'); // Replace with your EmailJS user ID
     })();
 
     function sendEmail() {
